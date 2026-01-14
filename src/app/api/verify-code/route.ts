@@ -16,13 +16,13 @@ export async function POST(request:Request) {
       // taking username and code 
        const {username , code}  = await request.json() 
       
-       const parsed = CheckVerifyCodeShema.safeParse(code)
-       if (!parsed.success) {
-        return Response.json({
-          success: false,
-          messaage: "Invaild Input must be a 6 digit code"
-        } , {status: 400})  
-       }
+      //  const parsed = CheckVerifyCodeShema.safeParse(code)
+      //  if (!parsed.success) {
+      //   return Response.json({
+      //     success: false,
+      //     messaage: "Invaild Input must be a 6 digit code"
+      //   } , {status: 400})  
+      //  }
       
        // If the username came URL-encoded, this turns it back to a normal string (e.g., john%20doe → john doe)
       const decodedUsername =  decodeURIComponent(username) 

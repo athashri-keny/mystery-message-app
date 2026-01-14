@@ -29,7 +29,8 @@ export async function POST(request: Request) {
        // find the user by email // checking if the email already exists 
      const ExistingUserByemail =  await UserModel.findOne({email})
      // creating a random 6 digit code
-     const verifyCode = Math.floor(1000000 + Math.random() * 900000).toString()
+const verifyCode = Math.floor(100000 + Math.random() * 900000).toString();
+
 
      //  If Email Exists: Update Their Info
      if (ExistingUserByemail) {
